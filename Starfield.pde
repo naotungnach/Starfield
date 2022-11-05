@@ -14,13 +14,6 @@ void setup()
     what[i]= new MoreParticle();
   for(int i = 150; i< what.length; i++)
     what[i]= new Particle();
-  wow = new Particle[500];
-  for(int i = 0; i< 100; i++)
-      wow[i]= new OddballParticle();
-  for(int i = 100; i< 150; i++)
-      wow[i]= new MoreParticle();
-  for(int i = 150; i< wow.length; i++)
-      wow[i]= new Particle();
 }
 void draw()
 {
@@ -37,9 +30,15 @@ void draw()
 }
 void mousePressed()
   {
-    noStroke();
-    //huh = huh + 100;
-    //redraw();
+
+    background(0);
+    for(int i = 0; i< 100; i++)
+    what[i]= new OddballParticle();
+    for(int i = 100; i< 150; i++)
+    what[i]= new MoreParticle();
+  for(int i = 150; i< what.length; i++)
+    what[i]= new Particle();
+    redraw();
   }
  
 class Particle
